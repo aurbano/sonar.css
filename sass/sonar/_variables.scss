@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/*!
+sonar.css - http://urbanoalvarez.es/sonar.css/
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Alejandro U. Alvarez
+*/
+
 /// Sonar colors (Same as Bootstrap)
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
@@ -11,3 +18,35 @@ $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
+
+/// Sonar sizes
+$size-base:             100px;
+$size-lg:               $size-base * 140%;
+$size-md:               $size-base;
+$size-sm:               $size-base * 90%;
+$size-xs:               $size-base * 60%;
+
+$size-start:            $size-xs;
+$size-end:              $size-base;
+
+/// Animation size
+$animate-base:          60px;
+$animate-lg:            $animate-base * 140%;
+$animate-md:            $animate-base;
+$animate-sm:            $animate-base * 90%;
+$animate-xs:            $animate-base * 60%;
+
+/// Border animation
+$border-base:           5px;
+$border-start:          $border-base;
+$border-end:            1px;
+
+/// Animation settings
+$duration-base:         1s !default;
+$origin-base:           top center !default;
+$fill-mode-base:        both !default;
+$iteration-count-base:  infinite !default;
+
+$timing-function-in-base:     ease-in !default;
+$timing-function-out-base:    ease-out !default;
+$timing-function-in-out-base: ease-in-out !default;
