@@ -17,6 +17,17 @@
   position:relative;
   z-index:1;
   
+  @include prefixer(animation-duration, $duration-base);
+  @include prefixer(animation-fill-mode, $fill-mode-base);
+
+	&.infinite {
+	  animation-iteration-count: $iteration-count-base;
+	}
+	
+	.pulse{
+	  @include prefixer(animation-name, sonar-pulse);
+	}
+  
   &::after{
     border-radius:50%;
     z-index:-1;
