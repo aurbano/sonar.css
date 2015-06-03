@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*!
+sonar.css - http://urbanoalvarez.es/sonar.css/
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Alejandro U. Alvarez
+*/
+
+.animated {
+  	@include prefixer(animation-duration, $duration-base);
+  	@include prefixer(animation-fill-mode, $fill-mode-base);
+
+	&.infinite {
+	  animation-iteration-count: $iteration-count-base;
+	}
+}
+
+@mixin prefixer($property, $value...) {
+    -webkit-#{$property}: unquote('#{$value}');
+    -moz-#{$property}: unquote('#{$value}');
+    -o-#{$property}: unquote('#{$value}');
+    #{$property}: unquote('#{$value}');
+}
+
+@mixin keyframe($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// TODO: convert to better syntax
+@-webkit-keyframes sonar {
+  from {
+      width: $size-start;
+      height: $size-start;
+      margin-top: -$size-start/2;
+      margin-left: -$size-start/2;
+      border-width: $border-base;
+      opacity:1;
+  }
+  to {
+      width: $size-end;
+      height: $size-end;
+      margin-top: -$size-end/2;
+      margin-left: -$size-end/2;
+      opacity:0;
+      border-width: $border-end;
+  }
+}
