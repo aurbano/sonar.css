@@ -21,20 +21,20 @@ $brand-danger:          #d9534f !default;
 
 /// Sonar sizes
 $size-base:             100px;
-$size-lg:               $size-base * 140%;
+$size-lg:               $size-base * 1.4;
 $size-md:               $size-base;
-$size-sm:               $size-base * 90%;
-$size-xs:               $size-base * 60%;
+$size-sm:               $size-base * 0.9;
+$size-xs:               $size-base * 0.6;
 
 $size-start:            $size-xs;
 $size-end:              $size-base;
 
 /// Animation size
 $animate-base:          60px;
-$animate-lg:            $animate-base * 140%;
+$animate-lg:            $animate-base * 1.4;
 $animate-md:            $animate-base;
-$animate-sm:            $animate-base * 90%;
-$animate-xs:            $animate-base * 60%;
+$animate-sm:            $animate-base * 0.9;
+$animate-xs:            $animate-base * 0.6;
 
 /// Border animation
 $border-base:           5px;
