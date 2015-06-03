@@ -7,3 +7,73 @@
 ///                             urbanoalvarez.es/sonar.css                                ///
 ///                                                                                       ///
 /// ------------------------------------------------------------------------------------- ///
+
+@import 'sonar/_variables';
+@import 'sonar/_animations';
+
+/// Sonar code
+
+.sonar{
+  position:relative;
+  z-index:1;
+  
+  &::after{
+    border-radius:50%;
+    z-index:-1;
+    padding:0px;
+    top:50%;
+    left:50%;
+    content: '';
+    display:block;
+    position:absolute;
+  }
+  
+  .sonar-stroke{
+    border-width:0;
+    border-style: solid;
+    
+    .sonar-default{
+      border-color: $gray-dark;
+    }
+    
+    .sonar-primary{
+      border-color: $brand-primary;
+    }
+    
+    .sonar-info{
+      border-color: $brand-info;
+    }
+    
+    .sonar-warning{
+      border-color: $brand-warning;
+    }
+    
+    .sonar-danger{
+      border-color: $brand-danger;
+    }
+  }
+  
+  .sonar-fill{
+    border: none;
+    
+    .sonar-default{
+      background-color: $gray-dark;
+    }
+    
+    .sonar-primary{
+      background-color: $brand-primary;
+    }
+    
+    .sonar-info{
+      background-color: $brand-info;
+    }
+    
+    .sonar-warning{
+      background-color: $brand-warning;
+    }
+    
+    .sonar-danger{
+      background-color: $brand-danger;
+    }
+  }
+}
