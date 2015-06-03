@@ -40,11 +40,39 @@ module.exports = function(grunt) {
                 files: 'sass/*.scss',
                 tasks: ['sass:dev', 'sass:dist']
             }
+        },
+        clean: {
+          build: {
+            src: ["build"]
+          }
+        },
+        copy: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        src: [
+                            'css/sonar.css',
+                            'index.html'
+                        ],
+                        dest: 'build/'
+                    }
+                ],
+            },
+        },
+        'gh-pages': {
+            options: {
+                base: 'build'
+            },
+            src: ['**']
         }
     });
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['sass:dev', 'sass:dist']);
+    grunt.registerTask('build', ['sass:dev', 'sass:dist', 'copy']);
+    grunt.registerTask('deploy', ['build','gh-pages']);
 };
