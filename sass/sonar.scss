@@ -19,14 +19,14 @@
   
   @include prefixer(animation-duration, $duration-base);
   @include prefixer(animation-fill-mode, $fill-mode-base);
-
-	&.infinite {
-	  animation-iteration-count: $iteration-count-base;
-	}
-	
-	.pulse{
-	  @include prefixer(animation-name, sonar-pulse);
-	}
+  
+  &.infinite {
+    animation-iteration-count: $iteration-count-base;
+  }
+  
+  .pulse{
+    @include prefixer(animation-name, sonar-pulse);
+  }
   
   &::after{
     border-radius:50%;
