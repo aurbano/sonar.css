@@ -1,0 +1,41 @@
+{
+  "name": "sonar.css",
+  "description": "Bootstrap-compatibly pure CSS animated attention seekers",
+  "version": "0.0.1",
+  "keywords": [
+    "css",
+    "sass",
+    "attention",
+    "bootstrap"
+  ],
+  "maintainers": [
+    {
+      "name": "Alejandro U. Alvarez",
+      "web": "http://urbanoalvarez.es"
+    }
+  ],
+  "demos": [
+    "http://urbanoalvarez.es/sonar.css/"
+  ],
+  "bugs": {
+    "web": "https://github.com/aurbano/sonar.css/issues"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/aurbano/sonar.css.git"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "MIT",
+      "url": "https://github.com/aurbano/sonar.css/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "https://github.com/aurbano/sonar.css",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4"
+  }
+}
