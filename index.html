@@ -76,9 +76,12 @@
       height:70px;
       border-radius:50%;
       -webkit-animation: hue 60s infinite linear;
-      margin:10% 25px 0 0;
+      margin:5% 25px 10% 0;
       display:inline-block;
       line-height:69px;
+    }
+    .btn-demo{
+      margin:5% 25px 10% 0;
     }
     </style>
 </head>
@@ -131,8 +134,37 @@
             <p>Use <code>sonar-hover</code> or <code>sonar-click</code> for custom triggers</p>
           </div>
           <div class="col-md-6 col-xs-6 text-center">
-              <a class="circle sonar sonar-stroke sonar-click" style="border-color:#FF6D00; background:#FF6D00; color:#fff">Click</a>
-              <a class="circle sonar sonar-stroke sonar-hover" style="border-color:#FF6D00; background:#FF6D00; color:#fff">Hover</a>
+              <a href="#" onclick="return false;" class="circle sonar sonar-fill sonar-click" style="border-color:#FF6D00; background:#FF6D00; color:#fff">Click</a>
+              <a href="#" onclick="return false;" class="circle sonar sonar-fill sonar-hover" style="border-color:#FF6D00; background:#FF6D00; color:#fff">Hover</a>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row" style="margin-top:30px">
+          <div class="col-md-6 col-xs-6">
+            <h4 id="delay"><a href="#delay">#</a> Delay</h4>
+            <p>Use <code>sonar-delay</code> to set the animation delay to 1s. You can also use <code>sonar-delay-short</code>, <code>sonar-delay-shorter</code>, <code>sonar-delay-long</code> and <code>sonar-delay-longer</code> for different timings</p>
+          </div>
+          <div class="col-md-6 col-xs-6 text-center">
+              <a href="#" onclick="return false;" class="circle sonar sonar-fill sonar-hover sonar-delay" style="border-color:#0091EA; background:#0091EA; color:#fff">Hover</a>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row" style="margin-top:30px">
+          <div class="col-md-6 col-xs-6">
+            <h4 id="colors"><a href="#colors">#</a> Colors</h4>
+            <p>Sonar will inherit the border/background colors. But sonar supports all the bootstrap colors, so you can use <code class="bg-default">sonar-default</code>, <code class="bg-primary">sonar-primary</code>, <code class="bg-success">sonar-success</code>, <code class="bg-info">sonar-info</code>, <code class="bg-warning">sonar-warning</code>, and <code class="bg-danger">sonar-danger</code>.</p>
+            <p>All colors are compatible with <code>sonar-stroke</code> and <code>sonar-fill</code></p>
+          </div>
+          <div class="col-md-6 col-xs-6 text-center">
+              <small class="text-muted">Hover to activate:</small><br>
+              <a href="#" onclick="return false;" class="btn btn-demo btn-default sonar sonar-hover sonar-fill sonar-primary">primary</a>
+              <a href="#" onclick="return false;" class="btn btn-demo btn-default sonar sonar-hover sonar-fill sonar-warning">warning</a>
+              <a href="#" onclick="return false;" class="btn btn-demo btn-default sonar sonar-hover sonar-fill sonar-info">info</a>
+              <a href="#" onclick="return false;" class="btn btn-demo btn-default sonar sonar-hover sonar-fill sonar-danger">danger</a>
           </div>
         </div>
 
