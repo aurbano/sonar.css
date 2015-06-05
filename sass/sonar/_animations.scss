@@ -5,46 +5,46 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Alejandro U. Alvarez
 */
 
+@mixin animation($names){
+  @include prefixer(animation-name, unquote('#{$names}'));
+}
 @mixin prefixer($property, $value...) {
-    -webkit-#{$property}: unquote('#{$value}');
-    -moz-#{$property}: unquote('#{$value}');
-    -o-#{$property}: unquote('#{$value}');
-    #{$property}: unquote('#{$value}');
+  -webkit-#{$property}: unquote('#{$value}');
+  -moz-#{$property}: unquote('#{$value}');
+  -o-#{$property}: unquote('#{$value}');
+  #{$property}: unquote('#{$value}');
 }
 
 @mixin keyframe($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }
-
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }
-
-    @keyframes #{$animation-name} {
-        @content;
-    }
+  @-webkit-keyframes #{$animation-name} { @content; }
+  @-moz-keyframes #{$animation-name} { @content; }
+  @-o-keyframes #{$animation-name} { @content; }
+  @keyframes #{$animation-name} { @content; }
 }
 
-@include keyframe(sonar-pulse) {
+// Base animation
+@include keyframe(sonar-base) {
   from {
-      width: $size-start;
-      height: $size-start;
-      margin-top: -$size-start/2;
-      margin-left: -$size-start/2;
-      border-width: $border-base;
-      opacity:1;
+    padding: 0;
+    opacity: $opacity-start;
   }
   to {
-      width: $size-end;
-      height: $size-end;
-      margin-top: -$size-end/2;
-      margin-left: -$size-end/2;
-      opacity:0;
-      border-width: $border-end;
+    padding: $animate-base;
+    opacity: $opacity-end;
+    top: -$animate-base;
+    left: -$animate-base;
+  }
+}
+// Only the border
+@include keyframe(sonar-stroke) {
+  from{
+    border-width: $border-start;
+    top: -$border-start;
+    left: -$border-start;
+  }
+  to {
+    border-width: $border-end;
+    top: - $animate-base - $border-end;
+    left: - $animate-base - $border-end;
   }
 }

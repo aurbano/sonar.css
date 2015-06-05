@@ -15,76 +15,88 @@
 
 .sonar{
   position:relative;
-  z-index:1;
-  
-  @include prefixer(animation-duration, $duration-base);
-  @include prefixer(animation-fill-mode, $fill-mode-base);
-  
-  &.infinite {
-    animation-iteration-count: $iteration-count-base;
-  }
-  
-  .pulse{
-    @include prefixer(animation-name, sonar-pulse);
-  }
-  
+
   &::after{
-    border-radius:50%;
     z-index:-1;
     padding:0px;
-    top:50%;
-    left:50%;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     content: '';
     display:block;
     position:absolute;
+    // Animate by default
+    @include animation("sonar-base");
+    @include prefixer(animation-iteration-count, $iteration-count-base);
+    @include prefixer(animation-duration, $duration-base);
+    @include prefixer(box-sizing, content-box);
   }
   
-  .sonar-stroke{
-    border-width:0;
-    border-style: solid;
-    
-    .sonar-default{
-      border-color: $gray-dark;
-    }
-    
-    .sonar-primary{
-      border-color: $brand-primary;
-    }
-    
-    .sonar-info{
-      border-color: $brand-info;
-    }
-    
-    .sonar-warning{
-      border-color: $brand-warning;
-    }
-    
-    .sonar-danger{
-      border-color: $brand-danger;
-    }
+  &.sonar-infinite::after{
+    @include prefixer(animation-iteration-count, infinite);
   }
   
-  .sonar-fill{
-    border: none;
-    
-    .sonar-default{
-      background-color: $gray-dark;
+  &.sonar-stroke{
+    &::after{
+      border-width:0;
+      border-color:$gray-light;
+      border-style: solid;
+      border-radius:inherit;
+      // Animate by default
+      @include animation("sonar-base, sonar-stroke");
     }
-    
-    .sonar-primary{
-      background-color: $brand-primary;
+    &.sonar-hover{
+      &::after{
+        @include prefixer(animation-name, none);
+      }
+      &:hover{
+        &::after{
+          @include animation("sonar-base, sonar-stroke");
+          @include prefixer(animation-duration, $duration-base);
+        }
+      }
     }
-    
-    .sonar-info{
-      background-color: $brand-info;
+    &.sonar-click{
+      &::after{
+        @include prefixer(animation-name, none);
+      }
+      &:focus{
+        &::after{
+          @include animation("sonar-base, sonar-stroke");
+          @include prefixer(animation-duration, $duration-base);
+        }
+      }
     }
-    
-    .sonar-warning{
-      background-color: $brand-warning;
+  }
+  &.sonar-fill{
+    &::after{
+      border:none;
+      background: $gray-light;
+      border-radius:inherit;
+      @include animation("sonar-base");
     }
-    
-    .sonar-danger{
-      background-color: $brand-danger;
+    &.sonar-hover{
+      &::after{
+        @include prefixer(animation-name, none);
+      }
+      &:hover{
+        &::after{
+          @include animation("sonar-base");
+          @include prefixer(animation-duration, $duration-base/2);
+        }
+      }
+    }
+    &.sonar-click{
+      &::after{
+        @include prefixer(animation-name, none);
+      }
+      &:focus{
+        &::after{
+          @include animation("sonar-base");
+          @include prefixer(animation-duration, $duration-base/2);
+        }
+      }
     }
   }
 }
