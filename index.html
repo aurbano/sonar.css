@@ -8,61 +8,94 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/sonar.css">
     <style type="text/css">
-    html, body{padding:0; margin:0;}
-    h1 {
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1, h2, h3, h4, h5 {
         font-family: 'Poiret One', sans-serif, cursive;
-        font-size: 5em;
     }
-    .cover-bg{
-      background-image: url(http://cdn.superbwallpapers.com/wallpapers/abstract/cube-pattern-28617-1680x1050.jpg);
-      background-size: cover;
-      background-position: 0;
+
+    h1{ font-size: 8em; }
+    h2{ font-size: 3em; }
+    
+    @-webkit-keyframes hue {
+        from {
+            -webkit-filter: hue-rotate(0deg);
+        }
+        to {
+            -webkit-filter: hue-rotate(-360deg);
+        }
     }
-    .btn-nav{ border: none; }
-    .dark-primary-color    { background-color: #00796B; }
-    .default-primary-color { background-color: #009688; }
-    .light-primary-color   { background-color: #B2DFDB; }
-    .text-primary-color    { color: #FFFFFF; }
-    .accent-color          { background-color: #FFC107; }
-    .primary-text-color    { color: #212121; }
-    .secondary-text-color  { color: #333333; }
-    .divider-color         { border-color: #B6B6B6; }
+    
+    .title {
+        color: #90CAF9;
+        background-image: -webkit-linear-gradient(92deg, #1565C0, #90CAF9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 60s infinite linear;
+    }
+    
+    .meta {
+        margin-bottom: .75rem;
+        font-weight: 100;
+        font-size: 1.5em;
+        line-height: 1;
+        letter-spacing: 0.15em;
+    }
+    
+    .accent-color {
+        border: 2px solid #90CAF9;
+        color: #90CAF9;
+        background-image: -webkit-linear-gradient(92deg, #1565C0, #90CAF9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 60s infinite linear;
+    }
+    .accent-color .fa{
+      background-image:none;
+      -webkit-text-fill-color: initial;
+    }
+    .text-muted, .text-muted a{
+      color:#aaa;
+      font-weight:150;
+    }
     </style>
 </head>
 
 <body>
-  <div class="default-primary-color cover-bg">
-    <div class="container secondary-text-color">
-        <div class="pull-right" style="margin-top:50px">
-          <a href="https://github.com/aurbano/sonar.css" class="btn btn-default accent-color btn-nav"><i class="fa fa-github"></i> Fork on Github</a>
-
-          <a href="https://github.com/aurbano/sonar.css/archive/master.zip" class="btn btn-default accent-color btn-nav"><i class="fa fa-download"></i> Download</a>
+    <div class="container text-center" style="margin-top:10%">
+        <h1 class="title">sonar<span class="text-primary-color">.css</span></h1>
+        <p class="meta">Animated attention seekers</p>
+        <div style="margin-top:50px">
+            <a href="https://github.com/aurbano/sonar.css" class="btn btn-default accent-color btn-nav sonar sonar-stroke sonar-delay-short" style="margin-right:30px"><i class="fa fa-github"></i> Fork on Github</a>
+            <a href="https://github.com/aurbano/sonar.css/archive/master.zip" class="btn btn-default accent-color btn-nav sonar sonar-stroke sonar-delay-long"><i class="fa fa-download"></i> Download</a>
         </div>
-        <h1>s<i class="fa fa-bullseye" style="font-size:0.6em"></i>nar<span class="text-primary-color">.css</span></h1>
-        <p style="font-style: italic; margin-bottom:30px">Bootstrap-compatible pure SASS animated attention seekers</p>
+        <hr style="width:50%" />
+        <p class="text-muted" style="margin:0 0 100px 0">
+          By <a href="http://urbanoalvarez.es">Alejandro U. Alvarez</a> &bull; MIT License
+        </p>
     </div>
-  </div>
-  <div class="container" style="margin-top:50px">
-    <div class="row">
-      <div class="col-md-6 col-xs-6">
-        <div style="margin:40px 0; text-align: center">
-          <a href="#" class="btn btn-default dark-primary-color btn-nav text-primary-color sonar sonar-click sonar-stroke">Click to trigger</a>
+    <div class="container text-center" style="margin-top:50px">
+        <h2>documentation</h2>
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <div style="margin:40px 0; text-align: center">
+                    <a href="#" class="btn btn-default dark-primary-color btn-nav text-primary-color sonar sonar-click sonar-stroke">Click to trigger</a>
+                </div>
+                <pre class="code">class="sonar sonar-stroke sonar-click"</pre>
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div style="margin:40px 0; text-align: center">
+                    <a href="#" class="btn btn-default dark-primary-color btn-nav text-primary-color sonar sonar-stroke sonar-infinite sonar-delay-shorter">Hover to trigger</a>
+                </div>
+                <pre class="code">class="sonar sonar-stroke sonar-hover"</pre>
+            </div>
         </div>
-        <pre class="code">class="sonar sonar-stroke sonar-click"</pre>
-      </div>
-      <div class="col-md-6 col-xs-6">
-        <div style="margin:40px 0; text-align: center">
-          <a href="#" class="btn btn-default dark-primary-color btn-nav text-primary-color sonar sonar-fill sonar-hover">Hover to trigger</a>
-        </div>
-        <pre class="code">class="sonar sonar-stroke sonar-hover"</pre>
-      </div>
+        <div style="margin-top:150px;"></div>
     </div>
-
-    <hr class="divider-color"></hr>
-    <footer class="text-center secondary-text-color">
-      <a href="https://github.com/aurbano/sonar.css"><i class="fa fa-github"></i> sonar.css</a> &bull; Developed by <a href="http://urbanoalvarez.es">Alejandro U. Alvarez</a> &bull; MIT License
-    </footer>
-  </div>
 </body>
 
 </html>
