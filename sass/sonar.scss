@@ -7,118 +7,173 @@
 ///                             urbanoalvarez.es/sonar.css                                ///
 ///                                                                                       ///
 /// ------------------------------------------------------------------------------------- ///
-
+/// Imports
 @import 'sonar/_variables';
 @import 'sonar/_animations';
-
+///
 /// Sonar code
-
-.sonar{
-  position:relative;
-
-  &::after{
-    z-index:-1;
-    padding:0px;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+.sonar {
+  position: relative;
+  &::after {
+    z-index: -1;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     content: '';
-    display:block;
-    position:absolute;
+    display: block;
+    position: absolute;
     // Animate by default
     @include animation("sonar-base");
     @include prefixer(animation-iteration-count, $iteration-count-base);
     @include prefixer(animation-duration, $duration-base);
     @include prefixer(box-sizing, content-box);
   }
-  
-  &.sonar-infinite::after{
+  &.sonar-infinite::after {
     @include prefixer(animation-iteration-count, infinite);
   }
-
-  &.sonar-delay{
-    &::after{
+  &.sonar-delay {
+    &::after {
       @include prefixer(animation-delay, $time-base);
     }
   }
-  &.sonar-delay-long{
-    &::after{
+  &.sonar-delay-long {
+    &::after {
       @include prefixer(animation-delay, $time-slow);
     }
   }
-  &.sonar-delay-longer{
-    &::after{
+  &.sonar-delay-longer {
+    &::after {
       @include prefixer(animation-delay, $time-slower);
     }
   }
-  &.sonar-delay-short{
-    &::after{
+  &.sonar-delay-short {
+    &::after {
       @include prefixer(animation-delay, $time-fast);
     }
   }
-  &.sonar-delay-shorter{
-    &::after{
+  &.sonar-delay-shorter {
+    &::after {
       @include prefixer(animation-delay, $time-faster);
     }
   }
-  
-  &.sonar-stroke{
-    &::after{
-      border-width:0;
+  &.sonar-stroke {
+    &::after {
+      border-width: 0;
       border-color: inherit;
       border-style: solid;
-      border-radius:inherit;
+      border-radius: inherit;
       // Animate by default
       @include animation("sonar-base, sonar-stroke");
     }
-    &.sonar-hover{
-      &::after{
+    &.sonar-hover {
+      &::after {
         @include prefixer(animation-name, none);
       }
-      &:hover{
-        &::after{
+      &.sonar-default {
+        &::after {
+          border-color: $gray;
+        }
+      }
+      &.sonar-primary {
+        &::after {
+          border-color: $brand-primary;
+        }
+      }
+      &.sonar-info {
+        &::after {
+          border-color: $brand-info;
+        }
+      }
+      &.sonar-success {
+        &::after {
+          border-color: $brand-success;
+        }
+      }
+      &.sonar-warning {
+        &::after {
+          border-color: $brand-warning;
+        }
+      }
+      &.sonar-danger {
+        &::after {
+          border-color: $brand-danger;
+        }
+      }
+      &:hover {
+        &::after {
           @include animation("sonar-base, sonar-stroke");
           @include prefixer(animation-duration, $duration-base);
         }
       }
     }
-    &.sonar-click{
-      &::after{
+    &.sonar-click {
+      &::after {
         @include prefixer(animation-name, none);
       }
-      &:focus{
-        &::after{
+      &:focus {
+        &::after {
           @include animation("sonar-base, sonar-stroke");
           @include prefixer(animation-duration, $duration-base);
         }
       }
     }
   }
-  &.sonar-fill{
-    &::after{
-      border:none;
+  &.sonar-fill {
+    &::after {
+      border: none;
       background: inherit;
-      border-radius:inherit;
+      border-radius: inherit;
       @include animation("sonar-base");
     }
-    &.sonar-hover{
-      &::after{
+    &.sonar-default {
+      &::after {
+        background-color: $gray;
+      }
+    }
+    &.sonar-primary {
+      &::after {
+        background-color: $brand-primary;
+      }
+    }
+    &.sonar-info {
+      &::after {
+        background-color: $brand-info;
+      }
+    }
+    &.sonar-success {
+      &::after {
+        background-color: $brand-success;
+      }
+    }
+    &.sonar-warning {
+      &::after {
+        background-color: $brand-warning;
+      }
+    }
+    &.sonar-danger {
+      &::after {
+        background-color: $brand-danger;
+      }
+    }
+    &.sonar-hover {
+      &::after {
         @include prefixer(animation-name, none);
       }
-      &:hover{
-        &::after{
+      &:hover {
+        &::after {
           @include animation("sonar-base");
           @include prefixer(animation-duration, $duration-base/2);
         }
       }
     }
-    &.sonar-click{
-      &::after{
+    &.sonar-click {
+      &::after {
         @include prefixer(animation-name, none);
       }
-      &:focus{
-        &::after{
+      &:focus {
+        &::after {
           @include animation("sonar-base");
           @include prefixer(animation-duration, $duration-base/2);
         }

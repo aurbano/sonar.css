@@ -182,6 +182,24 @@ Copyright (c) 2015 Alejandro U. Alvarez
   -o-animation-name: none;
   animation-name: none;
 }
+.sonar.sonar-stroke.sonar-hover.sonar-default::after {
+  border-color: #555555;
+}
+.sonar.sonar-stroke.sonar-hover.sonar-primary::after {
+  border-color: #337ab7;
+}
+.sonar.sonar-stroke.sonar-hover.sonar-info::after {
+  border-color: #5bc0de;
+}
+.sonar.sonar-stroke.sonar-hover.sonar-success::after {
+  border-color: #5cb85c;
+}
+.sonar.sonar-stroke.sonar-hover.sonar-warning::after {
+  border-color: #f0ad4e;
+}
+.sonar.sonar-stroke.sonar-hover.sonar-danger::after {
+  border-color: #d9534f;
+}
 .sonar.sonar-stroke.sonar-hover:hover::after {
   -webkit-animation-name: sonar-base, sonar-stroke;
   -moz-animation-name: sonar-base, sonar-stroke;
@@ -216,6 +234,24 @@ Copyright (c) 2015 Alejandro U. Alvarez
   -moz-animation-name: sonar-base;
   -o-animation-name: sonar-base;
   animation-name: sonar-base;
+}
+.sonar.sonar-fill.sonar-default::after {
+  background-color: #555555;
+}
+.sonar.sonar-fill.sonar-primary::after {
+  background-color: #337ab7;
+}
+.sonar.sonar-fill.sonar-info::after {
+  background-color: #5bc0de;
+}
+.sonar.sonar-fill.sonar-success::after {
+  background-color: #5cb85c;
+}
+.sonar.sonar-fill.sonar-warning::after {
+  background-color: #f0ad4e;
+}
+.sonar.sonar-fill.sonar-danger::after {
+  background-color: #d9534f;
 }
 .sonar.sonar-fill.sonar-hover::after {
   -webkit-animation-name: none;
