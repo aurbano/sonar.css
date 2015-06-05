@@ -23,7 +23,9 @@
     }
 
     h1{ font-size: 8em; }
-    h2{ font-size: 3em; }
+    h2{ font-size: 4em; }
+    h3{ font-size: 3em; }
+    h4{ font-size: 2em; }
     
     @-webkit-keyframes hue {
         from {
@@ -69,6 +71,15 @@
       background-image: none;
       -webkit-text-fill-color: initial;
     }
+    .circle{
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      -webkit-animation: hue 60s infinite linear;
+      margin:10% 25px 0 0;
+      display:inline-block;
+      line-height:69px;
+    }
     </style>
 </head>
 
@@ -81,26 +92,50 @@
             <a href="https://github.com/aurbano/sonar.css/archive/master.zip" class="btn btn-default accent-color btn-nav sonar sonar-stroke sonar-delay-long"><i class="fa fa-download"></i> Download (v@@{{version}})</a>
         </div>
         <hr style="width:50%" />
-        <p class="text-muted" style="margin:0 0 100px 0">
+        <p class="text-muted" style="margin:0 0 150px 0">
           By <a href="http://urbanoalvarez.es">Alejandro U. Alvarez</a> &bull; MIT License
         </p>
     </div>
-    <div class="container text-center" style="margin-top:50px">
-        <h2>documentation</h2>
-        <div class="row">
-            <div class="col-md-6 col-xs-6">
-                <div style="margin:40px 0; text-align: center">
-                    <a href="#" class="btn btn-default dark-primary-color btn-nav text-primary-color sonar sonar-click sonar-stroke">Click to trigger</a>
-                </div>
-                <pre class="code">class="sonar sonar-stroke sonar-click"</pre>
-            </div>
-            <div class="col-md-6 col-xs-6">
-                <div style="margin:40px 0; text-align: center">
-                    <a href="#" class="btn btn-default dark-primary-color btn-nav text-primary-color sonar sonar-fill sonar-success sonar-infinite">Hover to trigger</a>
-                </div>
-                <pre class="code">class="sonar sonar-stroke sonar-hover"</pre>
-            </div>
+    <div class="container text-left" style="margin-top:50px;">
+        <h2 class="text-center">documentation</h2>
+        
+        <div class="row" style="margin-top:30px">
+          <div class="col-md-6 col-xs-6">
+            <h4 id="getting-started"><a href="#getting-started">#</a> Getting started</h4>
+            <p>Add <code>sonar</code> as a class to any element to activate.</p>
+            <p>Use <code>sonar-infinite</code> to make the animation loop forever.</p>
+          </div>
+          <div class="col-md-6 col-xs-6 text-center">
+              <div class="circle sonar sonar-fill sonar-infinite" style="background:#C51162;"></div>
+          </div>
         </div>
+
+        <hr>
+
+        <div class="row" style="margin-top:30px">
+          <div class="col-md-6 col-xs-6">
+            <h4 id="animations"><a href="#animations">#</a> Animations</h4>
+            <p>You can use <code>sonar-stroke</code> for border animation, or <code>sonar-fill</code> for background animation.</p>
+          </div>
+          <div class="col-md-6 col-xs-6 text-center">
+              <div class="circle sonar sonar-stroke sonar-infinite" style="border:2px solid #00C853"></div>
+              <div class="circle sonar sonar-fill sonar-infinite" style="background:#00C853"></div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row" style="margin-top:30px">
+          <div class="col-md-6 col-xs-6">
+            <h4 id="triggers"><a href="#triggers">#</a> Triggers</h4>
+            <p>Use <code>sonar-hover</code> or <code>sonar-click</code> for custom triggers</p>
+          </div>
+          <div class="col-md-6 col-xs-6 text-center">
+              <a class="circle sonar sonar-stroke sonar-click" style="border-color:#FF6D00; background:#FF6D00; color:#fff">Click</a>
+              <a class="circle sonar sonar-stroke sonar-hover" style="border-color:#FF6D00; background:#FF6D00; color:#fff">Hover</a>
+          </div>
+        </div>
+
         <div style="margin-top:150px;"></div>
     </div>
 </body>
