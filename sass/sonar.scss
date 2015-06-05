@@ -36,11 +36,37 @@
   &.sonar-infinite::after{
     @include prefixer(animation-iteration-count, infinite);
   }
+
+  &.sonar-delay{
+    &::after{
+      @include prefixer(animation-delay, $time-base);
+    }
+  }
+  &.sonar-delay-long{
+    &::after{
+      @include prefixer(animation-delay, $time-slow);
+    }
+  }
+  &.sonar-delay-longer{
+    &::after{
+      @include prefixer(animation-delay, $time-slower);
+    }
+  }
+  &.sonar-delay-short{
+    &::after{
+      @include prefixer(animation-delay, $time-fast);
+    }
+  }
+  &.sonar-delay-shorter{
+    &::after{
+      @include prefixer(animation-delay, $time-faster);
+    }
+  }
   
   &.sonar-stroke{
     &::after{
       border-width:0;
-      border-color:$gray-light;
+      border-color: inherit;
       border-style: solid;
       border-radius:inherit;
       // Animate by default
@@ -72,7 +98,7 @@
   &.sonar-fill{
     &::after{
       border:none;
-      background: $gray-light;
+      background: inherit;
       border-radius:inherit;
       @include animation("sonar-base");
     }

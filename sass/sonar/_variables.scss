@@ -20,7 +20,7 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 /// Sonar sizes
-$animate-base:          30px;
+$animate-base:          15px;
 
 /// Border animation
 $border-base:           5px;
@@ -28,11 +28,18 @@ $border-start:          $border-base;
 $border-end:            1px;
 
 /// Opacity animation
-$opacity-start:         1;
+$opacity-start:         0.6;
 $opacity-end:           0;
 
+/// Delays
+$time-base:            1s;
+$time-slow:            $time-base*2;
+$time-slower:          $time-base*4;
+$time-fast:            $time-base/2;
+$time-faster:          $time-base/4;
+
 /// Animation settings
-$duration-base:         1s !default;
+$duration-base:         $time-base !default;
 $iteration-count-base:  1 !default;
 
 $timing-function-in-base:     ease-in !default;
