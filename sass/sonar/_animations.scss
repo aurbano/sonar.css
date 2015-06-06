@@ -6,7 +6,7 @@ Copyright (c) 2015 Alejandro U. Alvarez
 */
 
 @mixin animation($names){
-  @include prefixer(animation-name, unquote('#{$names}'));
+  animation-name: unquote('#{$names}');
 }
 
 // Base animation
