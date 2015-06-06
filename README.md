@@ -1,12 +1,27 @@
 [![sonar.css](https://raw.githubusercontent.com/aurbano/sonar.css/master/assets/sonar.png)](http://urbanoalvarez.es/sonar.css/)
+
+[![npm version](http://img.shields.io/npm/v/sonar.css.svg?style=flat-square)](https://www.npmjs.org/package/sonar.css)
+[![Dependency Status](http://img.shields.io/david/dev/aurbano/sonar.css.svg?style=flat-square)](https://david-dm.org/aurbano/sonar.css)
+[![license](http://img.shields.io/github/license/aurbano/sonar.css.svg?style=flat-square)](https://www.npmjs.org/package/sonar.css)
+[![downloads](https://img.shields.io/npm/dm/sonar.css.svg?style=flat-square)](https://www.npmjs.org/package/sonar.css)
+
 > CSS3 Animated Attention Seekers
 
-![Demo](https://raw.githubusercontent.com/aurbano/sonar.css/master/assets/demo.gif)
+[![Demo](https://raw.githubusercontent.com/aurbano/sonar.css/master/assets/demo.gif)](http://urbanoalvarez.es/sonar.css/)
 
 ## Getting started
 
-1. Add [`sonar.css`](https://github.com/aurbano/sonar.css/blob/master/css/sonar.css) or [`sonar.min.css`](https://github.com/aurbano/sonar.css/blob/master/css/sonar.min,css) to your website.
-2. Start using sonar!
+Bower
+```bash
+$ bower install sonar.css
+```
+
+npm
+```bash
+$ npm install sonar.css --save
+```
+
+Or manually add [`sonar.css`](https://github.com/aurbano/sonar.css/blob/master/css/sonar.css) or [`sonar.min.css`](https://github.com/aurbano/sonar.css/blob/master/css/sonar.min,css) to your website.
 
 ## [Documentation](http://urbanoalvarez.es/sonar.css/#getting-started)
 
