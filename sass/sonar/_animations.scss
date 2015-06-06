@@ -8,22 +8,9 @@ Copyright (c) 2015 Alejandro U. Alvarez
 @mixin animation($names){
   @include prefixer(animation-name, unquote('#{$names}'));
 }
-@mixin prefixer($property, $value...) {
-  -webkit-#{$property}: unquote('#{$value}');
-  -moz-#{$property}: unquote('#{$value}');
-  -o-#{$property}: unquote('#{$value}');
-  #{$property}: unquote('#{$value}');
-}
-
-@mixin keyframe($animation-name) {
-  @-webkit-keyframes #{$animation-name} { @content; }
-  @-moz-keyframes #{$animation-name} { @content; }
-  @-o-keyframes #{$animation-name} { @content; }
-  @keyframes #{$animation-name} { @content; }
-}
 
 // Base animation
-@include keyframe(sonar-base) {
+@keyframes sonar-base {
   from {
     padding: 0;
     opacity: $opacity-start;
@@ -36,8 +23,8 @@ Copyright (c) 2015 Alejandro U. Alvarez
   }
 }
 // Only the border
-@include keyframe(sonar-stroke) {
-  from{
+@keyframes sonar-stroke {
+  from {
     border-width: $border-start;
     margin: -$border-start;
   }
