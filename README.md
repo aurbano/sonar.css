@@ -3,7 +3,6 @@
 [![npm version](http://img.shields.io/npm/v/sonar.css.svg?style=flat-square)](https://www.npmjs.org/package/sonar.css)
 [![Dependency Status](http://img.shields.io/david/dev/aurbano/sonar.css.svg?style=flat-square)](https://david-dm.org/aurbano/sonar.css)
 [![license](http://img.shields.io/github/license/aurbano/sonar.css.svg?style=flat-square)](https://www.npmjs.org/package/sonar.css)
-[![downloads](https://img.shields.io/npm/dm/sonar.css.svg?style=flat-square)](https://www.npmjs.org/package/sonar.css)
 
 > CSS3 Animated Attention Seekers
 
