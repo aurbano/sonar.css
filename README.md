@@ -1,7 +1,7 @@
 [![sonar.css](https://raw.githubusercontent.com/aurbano/sonar.css/master/assets/sonar.png)](http://urbanoalvarez.es/sonar.css/)
 > CSS3 Animated Attention Seekers
 
-![Demo](https://raw.githubusercontent.com/aurbano/sonar.css/master/assets/demo.gif)
+[![Demo](https://raw.githubusercontent.com/aurbano/sonar.css/master/assets/demo.gif)](http://urbanoalvarez.es/sonar.css/)
 
 ## Getting started
 
