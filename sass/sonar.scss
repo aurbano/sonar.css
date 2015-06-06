@@ -14,7 +14,7 @@
 /// Sonar code
 .sonar {
   position: relative;
-  &::after {
+  &:after {
     z-index: -1;
     padding: 0;
     top: 0;
@@ -89,7 +89,7 @@
       border-radius: inherit;
 
       // Animate by default
-      animation: sonar-base, sonar-stroke;
+      animation-name: sonar-base, sonar-stroke;
     }
     &.sonar-hover {
       &:after {
@@ -127,7 +127,7 @@
       }
       &:hover {
         &:after {
-          animation: sonar-base, sonar-stroke;
+          animation-name: sonar-base, sonar-stroke;
         }
       }
     }
@@ -137,7 +137,7 @@
       }
       &:focus {
         &:after {
-          animation: sonar-base, sonar-stroke;
+          animation-name: sonar-base, sonar-stroke;
         }
       }
     }
@@ -147,7 +147,7 @@
       border: none;
       background: inherit;
       border-radius: inherit;
-      animation: sonar-base;
+      animation-name: sonar-base;
     }
     &.sonar-default {
       &:after {
@@ -185,7 +185,8 @@
       }
       &:hover {
         &:after {
-          animation: sonar-base $duration-base/2;
+          animation-name: sonar-base;
+          animation-duration: $duration-base/2;
         }
       }
     }
@@ -195,7 +196,8 @@
       }
       &:focus {
         &:after {
-          animation: sonar-base $duration-base/2;
+          animation-name: sonar-base;
+          animation-duration: $duration-base/2;
         }
       }
     }
