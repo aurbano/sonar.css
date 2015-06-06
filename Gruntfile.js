@@ -77,6 +77,14 @@ module.exports = function(grunt) {
           dest: 'build/index.html'
         }]
       }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'Firefox >= 5', 'Opera >= 12', 'Safari >= 4', 'ie 8', 'ie 9'],
+      },
+      dist: {
+        src: ['css/sonar.css', 'css/sonar.min.css']
+      },
     }
   });
 
@@ -86,8 +94,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-replace');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['sass:dev', 'sass:dist', 'copy', 'replace']);
+  grunt.registerTask('build', ['sass:dev', 'sass:dist', 'autoprefixer:dist', 'copy', 'replace']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
