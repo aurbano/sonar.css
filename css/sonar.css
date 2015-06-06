@@ -166,6 +166,30 @@ Copyright (c) 2015 Alejandro U. Alvarez
   -o-animation-delay: 0.25s;
   animation-delay: 0.25s;
 }
+.sonar.sonar-slow::after {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.sonar.sonar-slower::after {
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  animation-duration: 4s;
+}
+.sonar.sonar-fast::after {
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.sonar.sonar-faster::after {
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+}
 .sonar.sonar-stroke::after {
   border-width: 0;
   border-color: inherit;
@@ -205,10 +229,6 @@ Copyright (c) 2015 Alejandro U. Alvarez
   -moz-animation-name: sonar-base, sonar-stroke;
   -o-animation-name: sonar-base, sonar-stroke;
   animation-name: sonar-base, sonar-stroke;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
 }
 .sonar.sonar-stroke.sonar-click::after {
   -webkit-animation-name: none;
@@ -221,10 +241,6 @@ Copyright (c) 2015 Alejandro U. Alvarez
   -moz-animation-name: sonar-base, sonar-stroke;
   -o-animation-name: sonar-base, sonar-stroke;
   animation-name: sonar-base, sonar-stroke;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
 }
 .sonar.sonar-fill::after {
   border: none;
