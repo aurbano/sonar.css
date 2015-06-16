@@ -58,3 +58,4 @@ You can use Grunt with the following tasks:
 
 Developed by [Alejandro U. Alvarez](http://urbanoalvarez.es) - MIT License
 
+[![Analytics](https://ga-beacon.appspot.com/UA-3181088-16/sonar/readme)](https://github.com/aurbano)
