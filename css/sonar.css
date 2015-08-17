@@ -8,6 +8,42 @@ sonar.css - http://urbanoalvarez.es/sonar.css/
 Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Alejandro U. Alvarez
 */
+@-webkit-keyframes sonar-base {
+  from {
+    padding: 0;
+    opacity: 0.6;
+  }
+  to {
+    padding: 1.3em;
+    opacity: 0;
+    top: -1.3em;
+    left: -1.3em;
+  }
+}
+@-moz-keyframes sonar-base {
+  from {
+    padding: 0;
+    opacity: 0.6;
+  }
+  to {
+    padding: 1.3em;
+    opacity: 0;
+    top: -1.3em;
+    left: -1.3em;
+  }
+}
+@-o-keyframes sonar-base {
+  from {
+    padding: 0;
+    opacity: 0.6;
+  }
+  to {
+    padding: 1.3em;
+    opacity: 0;
+    top: -1.3em;
+    left: -1.3em;
+  }
+}
 @keyframes sonar-base {
   from {
     padding: 0;
@@ -16,6 +52,39 @@ Copyright (c) 2015 Alejandro U. Alvarez
   to {
     padding: 1.3em;
     opacity: 0;
+    top: -1.3em;
+    left: -1.3em;
+  }
+}
+@-webkit-keyframes sonar-stroke {
+  from {
+    border-width: 0.4em;
+    margin: -0.4em;
+  }
+  to {
+    border-width: 0.1em;
+    top: -1.3em;
+    left: -1.3em;
+  }
+}
+@-moz-keyframes sonar-stroke {
+  from {
+    border-width: 0.4em;
+    margin: -0.4em;
+  }
+  to {
+    border-width: 0.1em;
+    top: -1.3em;
+    left: -1.3em;
+  }
+}
+@-o-keyframes sonar-stroke {
+  from {
+    border-width: 0.4em;
+    margin: -0.4em;
+  }
+  to {
+    border-width: 0.1em;
     top: -1.3em;
     left: -1.3em;
   }
@@ -44,50 +113,98 @@ Copyright (c) 2015 Alejandro U. Alvarez
   content: '';
   display: block;
   position: absolute;
-  animation-name: sonar-base;
-  animation-iteration-count: 1;
-  animation-duration: 1s;
-  box-sizing: content-box;
+  -webkit-animation-name: sonar-base;
+     -moz-animation-name: sonar-base;
+       -o-animation-name: sonar-base;
+          animation-name: sonar-base;
+  -webkit-animation-iteration-count: 1;
+     -moz-animation-iteration-count: 1;
+       -o-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
 }
 .sonar.sonar-infinite:after {
-  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .sonar.sonar-delay:after {
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .sonar.sonar-delay-long:after {
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+     -moz-animation-delay: 2s;
+       -o-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .sonar.sonar-delay-longer:after {
-  animation-delay: 4s;
+  -webkit-animation-delay: 4s;
+     -moz-animation-delay: 4s;
+       -o-animation-delay: 4s;
+          animation-delay: 4s;
 }
 .sonar.sonar-delay-short:after {
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+     -moz-animation-delay: 0.5s;
+       -o-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .sonar.sonar-delay-shorter:after {
-  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.25s;
+     -moz-animation-delay: 0.25s;
+       -o-animation-delay: 0.25s;
+          animation-delay: 0.25s;
 }
 .sonar.sonar-slow:after {
-  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+     -moz-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .sonar.sonar-slower:after {
-  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+     -moz-animation-duration: 4s;
+       -o-animation-duration: 4s;
+          animation-duration: 4s;
 }
 .sonar.sonar-fast:after {
-  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+     -moz-animation-duration: 0.5s;
+       -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 .sonar.sonar-faster:after {
-  animation-duration: 0.25s;
+  -webkit-animation-duration: 0.25s;
+     -moz-animation-duration: 0.25s;
+       -o-animation-duration: 0.25s;
+          animation-duration: 0.25s;
 }
 .sonar.sonar-stroke:after {
   border-width: 0;
   border-color: inherit;
   border-style: solid;
-  border-radius: inherit;
-  animation-name: sonar-base, sonar-stroke;
+  -webkit-border-radius: inherit;
+          border-radius: inherit;
+  -webkit-animation-name: sonar-base, sonar-stroke;
+     -moz-animation-name: sonar-base, sonar-stroke;
+       -o-animation-name: sonar-base, sonar-stroke;
+          animation-name: sonar-base, sonar-stroke;
 }
 .sonar.sonar-stroke.sonar-hover:after {
-  animation-name: none;
+  -webkit-animation-name: none;
+     -moz-animation-name: none;
+       -o-animation-name: none;
+          animation-name: none;
 }
 .sonar.sonar-stroke.sonar-hover.sonar-default:after {
   border-color: #555555;
@@ -108,19 +225,32 @@ Copyright (c) 2015 Alejandro U. Alvarez
   border-color: #d9534f;
 }
 .sonar.sonar-stroke.sonar-hover:hover:after {
-  animation-name: sonar-base, sonar-stroke;
+  -webkit-animation-name: sonar-base, sonar-stroke;
+     -moz-animation-name: sonar-base, sonar-stroke;
+       -o-animation-name: sonar-base, sonar-stroke;
+          animation-name: sonar-base, sonar-stroke;
 }
 .sonar.sonar-stroke.sonar-click:after {
-  animation-name: none;
+  -webkit-animation-name: none;
+     -moz-animation-name: none;
+       -o-animation-name: none;
+          animation-name: none;
 }
 .sonar.sonar-stroke.sonar-click:focus:after {
-  animation-name: sonar-base, sonar-stroke;
+  -webkit-animation-name: sonar-base, sonar-stroke;
+     -moz-animation-name: sonar-base, sonar-stroke;
+       -o-animation-name: sonar-base, sonar-stroke;
+          animation-name: sonar-base, sonar-stroke;
 }
 .sonar.sonar-fill:after {
   border: none;
   background: inherit;
-  border-radius: inherit;
-  animation-name: sonar-base;
+  -webkit-border-radius: inherit;
+          border-radius: inherit;
+  -webkit-animation-name: sonar-base;
+     -moz-animation-name: sonar-base;
+       -o-animation-name: sonar-base;
+          animation-name: sonar-base;
 }
 .sonar.sonar-fill.sonar-default:after {
   background-color: #555555;
@@ -141,18 +271,34 @@ Copyright (c) 2015 Alejandro U. Alvarez
   background-color: #d9534f;
 }
 .sonar.sonar-fill.sonar-hover:after {
-  animation-name: none;
+  -webkit-animation-name: none;
+     -moz-animation-name: none;
+       -o-animation-name: none;
+          animation-name: none;
 }
 .sonar.sonar-fill.sonar-hover:hover:after {
-  animation-name: sonar-base;
-  animation-duration: 0.5s;
+  -webkit-animation-name: sonar-base;
+     -moz-animation-name: sonar-base;
+       -o-animation-name: sonar-base;
+          animation-name: sonar-base;
+  -webkit-animation-duration: 0.5s;
+     -moz-animation-duration: 0.5s;
+       -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 .sonar.sonar-fill.sonar-click:after {
-  animation-name: none;
+  -webkit-animation-name: none;
+     -moz-animation-name: none;
+       -o-animation-name: none;
+          animation-name: none;
 }
 .sonar.sonar-fill.sonar-click:focus:after {
-  animation-name: sonar-base;
-  animation-duration: 0.5s;
+  -webkit-animation-name: sonar-base;
+     -moz-animation-name: sonar-base;
+       -o-animation-name: sonar-base;
+          animation-name: sonar-base;
+  -webkit-animation-duration: 0.5s;
+     -moz-animation-duration: 0.5s;
+       -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
-
-/*# sourceMappingURL=sonar.css.map */
