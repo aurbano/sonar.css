@@ -1,7 +1,7 @@
 {
   "name": "sonar.css",
   "description": "Bootstrap-compatibly pure CSS animated attention seekers",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "keywords": [
     "css",
     "sass",
