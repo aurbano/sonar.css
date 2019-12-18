@@ -22,7 +22,7 @@ $ npm install sonar.css --save
 
 Or manually add [`sonar.css`](https://github.com/aurbano/sonar.css/blob/master/css/sonar.css) or [`sonar.min.css`](https://github.com/aurbano/sonar.css/blob/master/css/sonar.min,css) to your website.
 
-## [Documentation](http://urbanoalvarez.es/sonar.css/#getting-started)
+## [Documentation](https://aurbano.github.io/sonar.css/#getting-started)
 
 Add `sonar` as a class to any element to activate.
 
@@ -56,6 +56,6 @@ You can use Grunt with the following tasks:
 
 --------
 
-Developed by [Alejandro U. Alvarez](http://urbanoalvarez.es) - MIT License
+Developed by [Alejandro U. Alvarez](https://aurbano.eu) - MIT License
 
 [![Analytics](https://ga-beacon.appspot.com/UA-3181088-16/sonar/readme)](https://github.com/aurbano)
